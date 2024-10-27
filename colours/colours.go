@@ -3,7 +3,7 @@ import (
 	"image/color"
 )
 
-
+// initialises the colours
 func InitColor() []color.Color{
 	return []color.Color{
 	    color.White,

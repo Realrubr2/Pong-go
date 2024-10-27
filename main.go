@@ -16,6 +16,7 @@ import (
 	"golang.org/x/image/font/basicfont"
 )
 
+// some constants
 const (
 	screenWidth  = 640
 	screenHeight = 480
