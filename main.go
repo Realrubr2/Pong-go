@@ -141,7 +141,10 @@ func (g *Game) CollideWithWall() {
 }
 
 func (g *Game) CollideWithPaddle() {
-	if g.ball.X >= g.paddle.X && g.ball.Y >= g.paddle.Y && g.ball.Y <= g.paddle.Y + g.paddle.H {
+	if g.ball.X + g.ball.W >= g.paddle.X &&
+	g.paddle.X + g.paddle.W >= g.ball.X &&
+	g.ball.Y + g.ball.H >= g.paddle.Y &&
+	g.paddle.Y + g.paddle.H >= g.ball.Y {
 		g.ball.dxdt = -g.ball.dxdt
 		g.score++
 		if g.score > g.highScore {
